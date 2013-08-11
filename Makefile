@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -Wall -pipe -O2
+CFLAGS= -Wall -pipe -O2 -std=gnu99
 
 all:main.o isprime.o prime.o
 	${CC} ${CFLAGS} main.o isprime.o prime.o -o prime
