@@ -1,5 +1,7 @@
 #ifndef PRIME_H
 #define PRIME_H
-int isprime(int temp);
-void prime(int* in,int* out);
+typedef unsigned long long bigint;
+
+int isprime(bigint temp);
+void prime(bigint* in,bigint* out);
 #endif

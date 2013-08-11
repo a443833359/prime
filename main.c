@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <assert.h>
 int main(void){
-	int input,temp,output;
-	scanf("%d",&input);
+	bigint input,temp,output;
+	scanf("%llu",&input);
 	assert(input >= 2);
 	temp=input;
-	printf("%d=",input);
+	printf("%llu=",input);
 	while(!isprime(temp)){
 		prime(&temp,&output);
-		printf("%d*",output);
+		printf("%llu*",output);
 	}
-	printf("%d\n",temp);
+	printf("%llu\n",temp);
 	return 0;
 }
