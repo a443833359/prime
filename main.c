@@ -3,13 +3,16 @@
 #include <assert.h>
 #include <stdlib.h>
 int main(int argc,char* argv[]){
-	bigint temp,output;
+	bigint temp=0,output;
 
 	assert(argc == 2 || argc == 1);
 	if(argc == 2)
 		temp=strtoull(argv[1],NULL,10);
 	else
-		scanf("%llu",&temp);
+		while(!scanf("%llu",&temp)){
+			while(getchar() != '\n');
+			printf("Bad Input\n\n");
+		}
 	assert(temp >= 2);
 	printf("%llu=",temp);
 	while(!isprime(temp)){
